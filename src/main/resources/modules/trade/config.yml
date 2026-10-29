@@ -1,0 +1,22 @@
+settings:
+  request-expire-seconds: 30
+  confirmation-countdown-seconds: 5
+  max-trade-distance: 10
+  require-same-world: true
+messages:
+  prefix: '&8[&fNeptun&8] '
+  request-sent: '&fTrade request sent to &8%player%&f.'
+  request-received: '&8%player% &fwants to trade with you. Use &8/trade accept&f.'
+  request-expired: '&8Trade request expired.'
+  trade-started: '&fTrade started with &8%player%&f.'
+  trade-cancelled: '&8Trade cancelled.'
+  trade-complete: '&fTrade completed successfully.'
+  no-request: '&8You do not have a pending trade request.'
+  busy: '&8You or that player is already trading.'
+  not-enough-money: '&8You do not have enough money.'
+  not-enough-neptuns: '&8You do not have enough Neptuns.'
+  enter-amount: '&fType the amount in chat. Type &8cancel &fto stop.'
+  invalid-amount: '&8Invalid amount.'
+  countdown: '&fTrade completing in &8%seconds%&f seconds. Do not change your offer.'
+  offer-changed: '&8Offer changed. Both players must confirm again.'
+  player-left: '&8Trade cancelled because a player disconnected.'

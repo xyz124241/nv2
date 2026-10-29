@@ -1,0 +1,15 @@
+messages:
+  prefix: '&8[&fNeptun&8] '
+settings-defaults:
+  join-message: true
+  leave-message: true
+  payments: true
+  tpa: true
+  chat-messages: true
+  friend-messages: true
+  friend-gifts: true
+  item-display: true
+gui:
+  title: '&8Friends'
+  settings-title: '&8Settings'
+  friend-title: '&8Friend: &f%player%'

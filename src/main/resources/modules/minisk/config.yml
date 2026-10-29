@@ -1,0 +1,12 @@
+# MiniSk link settings
+# The Discord command sends only the clickable URL to the player who executes /discord or /dc.
+discord-url: "https://discord.gg/EaCjRVkEQu"
+
+# Text shown privately before the store links. Supports Minecraft color codes (&a, &e, &#RRGGBB).
+store-message: "&6&lNeptune Store"
+
+# Add as many store links as you need. Each link is sent as a separate clickable private chat message.
+# Clicking a link normally makes Minecraft ask the player to confirm opening the website.
+store-links:
+  - text: "&e&nOpen Store"
+    url: "https://example.com"

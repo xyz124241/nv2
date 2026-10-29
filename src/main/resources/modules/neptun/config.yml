@@ -1,0 +1,87 @@
+# Neptun configuration
+prefix: '&8[&f&lNeptun&8] &f'
+# Block use of Nether and End portals. Existing world access may need server/portal configuration too.
+dimensions:
+  disable-nether: false
+  disable-end: false
+
+# Home-Limits pro Rang (LuckPerms-Gruppe). Es gilt der beste Rang des Spielers (kleinste rtp.ranks priority).
+homes:
+  default-limit: 3
+  limits:
+    member: 3
+    platin: 5
+    titan: 8
+    astat: 12
+    astro: 15
+    lunar: 20
+    neptun: 30
+
+rtp:
+  # Wartezeit in Sekunden vor dem Teleport (gilt fuer ALLE Raenge)
+  delay-seconds: 5
+  # true: Teleport wird abgebrochen, wenn man sich bewegt
+  cancel-on-move: true
+  # true: RTP geht nur in der Welt, in der man gerade ist
+  current-world-only: true
+  menu:
+    # false: /rtp teleportiert direkt in der aktuellen Welt (empfohlen)
+    # true:  /rtp oeffnet ein Menue (Overworld in der Mitte).
+    #        Fuer mehrere Welten im Menue zusaetzlich current-world-only: false setzen.
+    enabled: false
+  # RTP pro Welt an/aus. Nicht eingetragene Welten: nur Overworld (NORMAL) ist an.
+  # Nether und End sind hier aus und tauchen auch nicht im Menue auf.
+  worlds:
+    world:
+      enabled: true
+    world_nether:
+      enabled: false
+    world_the_end:
+      enabled: false
+  # Raenge = LuckPerms-Gruppen (Name der Gruppe). Kleinste priority = bester Rang und gewinnt.
+  # Wer nur "member" erbt (z.B. Owner/Sup ohne eigenen Eintrag), bekommt die member-Werte.
+  # cooldown in Sekunden, Radius in Bloecken (um die Weltmitte bzw. Border-Mitte).
+  ranks:
+    neptun:
+      priority: 0
+      min-radius: 500
+      max-radius: 10000
+      cooldown: 50
+    lunar:
+      priority: 1
+      min-radius: 500
+      max-radius: 10000
+      cooldown: 120
+    astro:
+      priority: 2
+      min-radius: 500
+      max-radius: 10000
+      cooldown: 150
+    astat:
+      priority: 3
+      min-radius: 500
+      max-radius: 10000
+      cooldown: 200
+    titan:
+      priority: 4
+      min-radius: 500
+      max-radius: 10000
+      cooldown: 250
+    platin:
+      priority: 5
+      min-radius: 500
+      max-radius: 10000
+      cooldown: 300
+    member:
+      priority: 6
+      min-radius: 500
+      max-radius: 10000
+      cooldown: 360
+  max-attempts: 40
+
+homes-menu:
+  title: '&8&lDeine Homes'
+  rows: 3
+rtp-menu:
+  title: '&8&lZufalls-Teleport'
+  rows: 3

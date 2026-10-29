@@ -1,0 +1,71 @@
+# NeptunWorth - Konfiguration
+# Preise pro Item stehen in prices.yml, Enchant-Preise in enchants.yml (werden beim ersten Start automatisch erzeugt).
+
+currency:
+  money-name: "Money"
+  neptuns-name: "Neptuns"
+
+# Wie viele Money ein Neptun wert ist. Nur für die automatisch erzeugten Standardpreise
+# (neptuns = money / ratio). Danach kannst du in prices.yml jeden Preis einzeln ändern.
+neptuns-ratio: 100
+
+worth:
+  # true: Klick auf ein Item im /worth-Menü verkauft es aus deinem Inventar
+  click-to-sell: true
+
+shop:
+  enabled: true
+  # Kaufpreis = Verkaufswert * buy-multiplier
+  buy-multiplier: 3.0
+
+sell:
+  # Beschädigte Werkzeuge/Rüstung bringen weniger
+  durability-scaling: true
+  min-durability-fraction: 0.25
+
+# Aufpreis für Tränke (Money). Für Neptuns wird durch neptuns-ratio geteilt.
+potion-bonus: 150
+
+# Diese Items sind nicht verkäuflich/kaufbar (werden im /worth-Menü trotzdem angezeigt).
+# Leere die Liste, wenn wirklich alles handelbar sein soll.
+blacklist:
+  - BARRIER
+  - BEDROCK
+  - COMMAND_BLOCK
+  - CHAIN_COMMAND_BLOCK
+  - REPEATING_COMMAND_BLOCK
+  - COMMAND_BLOCK_MINECART
+  - STRUCTURE_BLOCK
+  - STRUCTURE_VOID
+  - JIGSAW
+  - DEBUG_STICK
+  - LIGHT
+  - KNOWLEDGE_BOOK
+  - SPAWNER
+  - REINFORCED_DEEPSLATE
+  - END_PORTAL_FRAME
+  - PETRIFIED_OAK_SLAB
+  - BUDDING_AMETHYST
+
+messages:
+  prefix: "&8[&bNeptun&8] &7"
+  player-only: "&cDieser Befehl geht nur als Spieler."
+  no-permission: "&cDafür hast du keine Berechtigung."
+  usage: "&cBenutzung: &f{usage}"
+  unknown-currency: "&cUnbekannte Währung. Nutze &fmoney &coder &fneptuns&c."
+  currency-unavailable: "&c{currency} ist gerade nicht verfügbar (Economy-Plugin fehlt?)."
+  shop-disabled: "&cDer Shop ist deaktiviert."
+  sold: "&aDu hast &f{count} &aItem(s) für &f{amount} &averkauft."
+  nothing-sellable: "&cDu hast nichts Verkäufliches dabei."
+  nothing-worth: "&cDer Wert reicht noch nicht für mindestens 1 {currency}. Verkaufe mehr auf einmal."
+  bought: "&aDu hast &f{count}x {item} &afür &f{price} &agekauft."
+  not-buyable: "&cDieses Item ist nicht kaufbar."
+  not-enough: "&cDu brauchst &f{price}&c, hast aber nicht genug."
+  inventory-full: "&eDein Inventar war voll, der Rest wurde auf den Boden gelegt."
+  error: "&cEs ist ein Fehler aufgetreten, es wurde nichts verändert."
+  search-prompt: "&aSchreibe den Suchbegriff in den Chat. &7(&fabbrechen&7 = abbrechen, &f-&7 = Suche löschen)"
+  search-cancelled: "&7Suche abgebrochen."
+  no-item: "&cDu hast kein Item in der Hand."
+  reload-ok: "&aKonfiguration und Preise neu geladen."
+  price-set: "&aPreis für &f{item} &aauf &f{price} &agesetzt."
+  invalid-number: "&cUngültige Zahl."

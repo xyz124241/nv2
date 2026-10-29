@@ -1,0 +1,13 @@
+# If true, hide the killer name when the killer has an active invisibility effect.
+hide-killer-when-invisible: true
+
+# Replacement shown instead of the killer's name.
+# Use "Unknown" or "&kUnknown&r" for obfuscated text.
+replacement: "&kUnknown&r"
+
+# If true, also hide the victim's name in the death message.
+hide-victim-name: false
+
+# Format for player-vs-player death messages.
+# Placeholders: %victim%, %killer%
+pvp-message: "&8%victim% &7was eliminated by &8%killer%&7."

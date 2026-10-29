@@ -1,0 +1,45 @@
+# MiniSk example - edit, then run /minisk reload
+# Colors: &a &c &l ...   Hex: &#ff8800 or <#ff8800>
+# Placeholders: %player% %world% %online% %arg1% %args%
+
+command /hello:
+    aliases: hi, hey
+    description: Says hello
+    trigger:
+        send "&aHello &#ff8800%player%&a! &7There are &f%online% &7players online."
+        link "&b&nClick to open our website" "https://example.com"
+        sound ENTITY_PLAYER_LEVELUP
+
+command /web:
+    trigger:
+        send "&6Visit us: https://example.com"
+        title "&6&lWelcome" "&7%player%"
+
+command /minishop:
+    trigger:
+        menu minishop
+
+menu minishop:
+    title: "&6&lShop"
+    rows: 3
+    fill: GRAY_STAINED_GLASS_PANE
+    slot 11:
+        item: DIAMOND
+        name: "&bFree Diamond"
+        lore: "&7Click to get one" | "&8Hello %player%"
+        on click:
+            give DIAMOND 1
+            send "&aYou got a diamond!"
+            close
+    slot 13:
+        item: PAPER
+        name: "&eWebsite"
+        lore: "&7Click for the link"
+        on click:
+            link "&b&nOpen website" "https://example.com"
+            close
+    slot 15:
+        item: BARRIER
+        name: "&cClose"
+        on click:
+            close

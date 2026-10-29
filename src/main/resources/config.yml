@@ -1,0 +1,17 @@
+# NeptunCore - Hauptkonfiguration
+# Jedes Modul hat zusätzlich eine eigene config.yml unter plugins/NeptunCore/<modul>/config.yml
+# Module an-/abschalten wirkt erst nach einem Server-Neustart.
+modules:
+  neptun: true         # /spawn /setspawn /home /sethome /delhome /rtp
+  worth: true          # /worth /sell /shop /neptunworth
+  ah: true             # /ah (Auktionshaus)
+  trade: true          # /trade (Shift + Rechtsklick auf Spieler)
+  social: true         # /friends /settings (Freunde, Geschenke, Einstellungen)
+  unknownkiller: true  # versteckt den Killer-Namen bei Unsichtbarkeit
+  minisk: true         # .sk-Skripte, /discord, /store, /minisk
+  chatitem: true       # [i] im Chat zeigt das Item in der Hand (Farben, Name, Verzauberungen)
+  messages: true       # /nm - Op-Menue fuer farbige Server-Nachrichten (frueher NeptuneMessages)
+  whitelist: true      # /ncw - Command-Whitelist + Rechte pro LuckPerms-Rang (braucht LuckPerms)
+
+# Beim ersten Start Daten der alten Einzel-Plugins (plugins/NeptunAH usw.) in den neuen Ordner kopieren.
+migrate-old-data: true

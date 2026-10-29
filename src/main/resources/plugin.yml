@@ -1,0 +1,155 @@
+name: NeptunCore
+version: ${project.version}
+main: de.neptun.core.NeptunCore
+api-version: '1.21'
+author: Neptun
+description: Neptun All-in-One - Spawn/Homes/RTP, Auktionshaus, Trade, Social, Worth/Sell/Shop, UnknownKiller und MiniSk in einem Plugin.
+softdepend: [Vault, PlayerPoints, LuckPerms]
+
+commands:
+  ncw:
+    description: Command-Whitelist und Rechte pro LuckPerms-Rang.
+    usage: /ncw [gui|list|info|allow|deny|perm|...]
+  nm:
+    description: Neptune Messages - farbige Server-Nachrichten senden.
+    usage: /nm [Text]
+    aliases: [neptunemessages]
+  neptun:
+    description: NeptunCore Verwaltung (Module anzeigen, Konfiguration neu laden).
+    usage: /neptun [reload]
+    permission: neptun.admin
+  # --- Neptun (Spawn / Homes / RTP) ---
+  spawn:
+    description: Teleport to this world's spawn.
+    usage: /spawn
+  setspawn:
+    description: Set this world's spawn.
+    usage: /setspawn
+    permission: neptun.setspawn
+  home:
+    description: Open home menu or teleport to a home.
+    usage: /home [name]
+  sethome:
+    description: Save a home.
+    usage: /sethome <name>
+  delhome:
+    description: Open home deletion menu or delete a named home.
+    usage: /delhome [name]
+  rtp:
+    description: Random teleport in the world you are in (5s wait, cooldown per rank).
+    usage: /rtp
+  # --- NeptunWorth ---
+  worth:
+    description: Zeigt den Wert aller Items
+    usage: /worth <money|neptuns> [hand|Suchbegriff]
+  sell:
+    description: Items verkaufen
+    usage: /sell <money|neptuns> [hand|all]
+  shop:
+    description: Items kaufen
+    usage: /shop <money|neptuns> [Suchbegriff]
+  neptunworth:
+    description: Verwaltung von NeptunWorth
+    usage: /neptunworth <reload|set>
+    aliases: [nw]
+  # --- NeptunAH ---
+  ah:
+    description: Opens the Neptun auction house.
+    usage: /ah [sell <price> <money|neptuns>|history]
+  # --- NeptunTrade ---
+  trade:
+    description: Trade with another player.
+    usage: /trade <player|accept|deny|cancel|money|neptuns>
+  # --- NeptunSocial ---
+  friends:
+    description: Open your friends menu or manage friends
+    aliases: [friend, frinds, frineds]
+    usage: /friends
+  settings:
+    description: Open your personal settings
+    aliases: [setting, setings]
+    usage: /settings
+  friendsread:
+    description: Read saved friend messages
+    usage: /friends read
+  friendsgive:
+    description: Send or view friend gifts
+    usage: /friends give <player|see|see history>
+  # --- MiniSk ---
+  minisk:
+    description: Reload MiniSk scripts
+    usage: /minisk reload
+    permission: minisk.admin
+  discord:
+    description: Sends the Discord link privately
+    aliases: [dc]
+    usage: /discord
+  store:
+    description: Sends the store links privately
+    usage: /store
+
+permissions:
+  neptun.chatitem:
+    default: true
+  ncw.admin:
+    default: op
+  neptunemessages.use:
+    default: op
+  neptun.setspawn:
+    default: op
+  neptun.admin:
+    default: op
+  neptun.bypass.cooldown:
+    default: op
+  neptun.bypass.dimension:
+    default: op
+  neptun.rank.member:
+    default: true
+  neptun.rank.platin:
+    default: false
+  neptun.rank.titan:
+    default: false
+  neptun.rank.astat:
+    default: false
+  neptun.rank.astro:
+    default: false
+  neptun.rank.lunar:
+    default: false
+  neptun.rank.neptun:
+    default: false
+  neptunworth.worth:
+    default: true
+  neptunworth.sell:
+    default: true
+  neptunworth.sell.all:
+    default: true
+  neptunworth.shop:
+    default: true
+  neptunworth.admin:
+    default: op
+  neptunah.use:
+    default: true
+  neptunah.sell:
+    default: true
+  neptunah.admin:
+    default: op
+  neptunah.limit.member:
+    default: true
+  neptunah.limit.platin:
+    default: false
+  neptunah.limit.titan:
+    default: false
+  neptunah.limit.astat:
+    default: false
+  neptunah.limit.astro:
+    default: false
+  neptunah.limit.lunar:
+    default: false
+  neptunah.limit.neptun:
+    default: false
+  neptuntrade.use:
+    default: true
+  neutronsocial.admin:
+    default: op
+  minisk.admin:
+    default: op

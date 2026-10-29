@@ -1,0 +1,22 @@
+# Neptune Messages - Einstellungen
+# Alle Texte hier sind MiniMessage: https://docs.advntr.dev/minimessage/format.html
+
+# Wird vor jede Nachricht gesetzt (statt eines Spielernamens).
+# Im Menue kannst du den Prefix pro Nachricht an/aus schalten.
+prefix: "<gradient:#00c6ff:#0072ff><bold>Neptune SMP</bold></gradient> <dark_gray>»</dark_gray> "
+
+# Untertitel, wenn die Anzeige-Art "Titel" gewaehlt ist (und Prefix an ist).
+title-subtitle: "<gradient:#00c6ff:#0072ff>Neptune SMP</gradient>"
+
+# Titel-Zeiten in Ticks (20 Ticks = 1 Sekunde)
+title-fade-in: 10
+title-stay: 80
+title-fade-out: 20
+
+# Welten, in die NICHT gesendet wird (Weltname, Gross-/Kleinschreibung egal).
+# Standard: leer = wirklich jede Welt.
+excluded-worlds: []
+
+# Schreibt in die Server-Konsole, wer eine Nachricht gesendet hat.
+# Im Spiel sieht niemand den Absender.
+log-to-console: true

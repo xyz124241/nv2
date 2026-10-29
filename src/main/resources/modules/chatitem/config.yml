@@ -1,0 +1,12 @@
+# [i] im Chat: zeigt das Item in der Hand mit Farben, Namen und Verzauberungen
+# (Maus darueber = komplette Beschreibung wie im Inventar).
+# Ausschalten pro Spieler: /settings -> "Item display".
+tokens:
+  - "[i]"
+  - "[item]"
+# Bei mehreren Items " x64" anhaengen
+show-amount: true
+# Verzauberungen zusaetzlich direkt im Chat zeigen, z.B. (Schaerfe V, Haltbarkeit III)
+inline-enchants: false
+# Text, wenn keine Item in der Hand ist (MiniMessage)
+empty-hand-text: "<gray>[Leere Hand]"

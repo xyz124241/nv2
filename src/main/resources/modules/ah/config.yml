@@ -1,0 +1,21 @@
+prefix: '&8[&f&lNeptun AH&8] &f'
+menu:
+  title: '&8&lNeptun AH'
+  page-size: 45
+  search-slot: 45
+  previous-slot: 48
+  history-slot: 49
+  next-slot: 50
+  close-slot: 53
+limits:
+  member: 3
+  platin: 5
+  titan: 7
+  astat: 10
+  astro: 15
+  lunar: 20
+  neptun: 30
+messages:
+  list-full: '&cDu hast dein AH-Limit erreicht (&f%limit&c).'
+  no-money: '&cDu hast nicht genug Geld.'
+  no-neptuns: '&cDu hast nicht genug Neptuns.'
